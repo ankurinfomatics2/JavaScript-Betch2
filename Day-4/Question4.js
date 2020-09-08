@@ -39,7 +39,7 @@ let player = [
     
 ];
 
-function ShowPlayerWhoseAgeAboveThirty() {
+function ShowPlayerWhoseAgeBelowThirty() {
 
     let count = 1;
     console.log("\n\nDisplay all the objects having age less than 30: ")
@@ -88,5 +88,5 @@ function ShowPlayerWhoLiveInIndia() {
 }
 
 
-ShowPlayerWhoseAgeAboveThirty();
+ShowPlayerWhoseAgeBelowThirty();
 ShowPlayerWhoLiveInIndia();
