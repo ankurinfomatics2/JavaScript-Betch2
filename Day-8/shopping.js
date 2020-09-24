@@ -232,13 +232,23 @@ function addToCart(id) {
 
     let pro = getProductByID(products, id);
 
-    // cart.push(products[index]);
+    // console.log("The selected item's properties:", pro.id, pro.name, pro.description);
+    
+    if (checkInCart(pro.id)) {
+        console.log("\nThe ", pro.name, " is already exist in the cart");
+        alert("This item is already exist in Cart");
+        return false;
+    }
     cart.push(pro);
-
-    //  console.log(cart);
-
+    console.log("\nThe ", pro.name, " is added into the cart");
     displayProducts(cart, "cart");
+    return true;
+}
 
+function checkInCart(id) {
+    return cart.some(function(e1){
+        return e1.id == id;
+    });
 }
 
 
